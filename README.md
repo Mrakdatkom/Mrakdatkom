@@ -12,3 +12,5 @@
   <img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" alt="Vercel" width="70" height="70" />
   <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="MongoDB" width="70" height="70" />
 </p>
+
+[![My Stats](https://github-stats-extended.vercel.app/api?username=Mrakdatkom)](https://github.com/stats-organization/github-stats-extended)
