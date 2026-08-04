@@ -1,6 +1,6 @@
 ## It's not a bug, it's an undocumented feature.
 
-<p align="center">
+<p align="center" gap="2">
   <img src="https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg" alt="Laravel" width="70" height="70" />
   <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" width="70" height="70" />
   <img src="https://github.com/user-attachments/assets/4e42bd0f-29d0-4b6b-95a7-88a2d8052f6e" alt="GSAP" width="70" height="70" />
