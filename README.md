@@ -1,6 +1,6 @@
 <h1 align="center">It's not a bug, it's an undocumented feature.</h1>
 
-<p>
+<p align="center">
   <img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="JavaScript" width="45" height="45" />
   <img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="JavaScript" width="45" height="45" />
   <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React JS" width="45" height="45" />
@@ -33,8 +33,4 @@
 ## GitHub Stats
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=Mrakdatkom&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</p>
-
-<p align="center">
-  <i>Thanks for stopping by — check back later, the snake's always moving. 🐍</i>
 </p>
