@@ -26,10 +26,3 @@
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Mrakdatkom/Mrakdatkom/output/github-contribution-grid-snake.svg" />
   </picture>
 </p>
-
----
-
-## GitHub Stats
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=Mrakdatkom&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</p>
