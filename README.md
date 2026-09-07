@@ -14,11 +14,17 @@
 </p>
 
 <p align="center">
-  <a href="www.linkedin.com/in/markryanbz">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">
+    <img
+      src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+      alt="LinkedIn"
+    />
   </a>
   <a href="https://markzipagan.vercel.app/">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
+    <img
+      src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"
+      alt="Portfolio"
+    />
   </a>
 </p>
 
@@ -28,7 +34,7 @@
 
 <p align="center">
   <img
-    src="https://github-readme-stats.vercel.app/api?username=Mrakdatkom&show_icons=true&count_private=true&include_all_commits=true&hide_border=true"
+    src="https://github-readme-stats.vercel.app/api?username=Mrakdatkom&show_icons=true&hide_border=true&include_all_commits=true&count_private=true"
     alt="GitHub Stats"
     height="180"
   />
@@ -39,10 +45,14 @@
   />
 </p>
 
+<br />
+
+<h2 align="center">Most Used Languages</h2>
+
 <p align="center">
   <img
     src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mrakdatkom&layout=compact&langs_count=8&hide_border=true"
-    alt="Top Languages"
+    alt="Most Used Languages"
     height="180"
   />
 </p>
@@ -52,23 +62,36 @@
 <h2 align="center">Contribution Activity</h2>
 
 <p align="center">
-  <img
-    src="https://github-readme-activity-graph.vercel.app/graph?username=Mrakdatkom&hide_border=true&area=true"
-    alt="GitHub Contribution Activity"
-    width="95%"
-  />
+  <a href="https://github.com/Mrakdatkom">
+    <img
+      src="https://github-readme-stats.vercel.app/api?username=Mrakdatkom&show_icons=true&hide_border=true&hide=stars,prs,issues"
+      alt="GitHub Contribution Overview"
+      width="600"
+    />
+  </a>
 </p>
 
 <br />
 
-<h2 align="center">GitHub Profile</h2>
-
 <p align="center">
-  <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Mrakdatkom&theme=github_dark"
-    alt="GitHub Profile Details"
-    width="95%"
-  />
+  <a href="https://github.com/Mrakdatkom">
+    <img
+      src="https://img.shields.io/github/followers/Mrakdatkom?label=Followers&style=for-the-badge"
+      alt="GitHub Followers"
+    />
+  </a>
+  <a href="https://github.com/Mrakdatkom?tab=repositories">
+    <img
+      src="https://img.shields.io/github/stars/Mrakdatkom?affiliations=OWNER&style=for-the-badge"
+      alt="GitHub Stars"
+    />
+  </a>
+  <a href="https://github.com/Mrakdatkom?tab=repositories">
+    <img
+      src="https://img.shields.io/badge/Repositories-View-black?style=for-the-badge&logo=github"
+      alt="Repositories"
+    />
+  </a>
 </p>
 
 <br />
