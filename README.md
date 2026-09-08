@@ -34,7 +34,7 @@
 
 <p align="center">
   <img
-    src="https://github-readme-stats.vercel.app/api?username=Mrakdatkom&show_icons=true&hide_border=true&include_all_commits=true&count_private=true"
+    src="github-readme-stats-mrakdatkom.vercel.app"
     alt="GitHub Stats"
     height="180"
   />
@@ -51,7 +51,7 @@
 
 <p align="center">
   <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mrakdatkom&layout=compact&langs_count=8&hide_border=true"
+    src="github-readme-stats-mrakdatkom.vercel.app"
     alt="Most Used Languages"
     height="180"
   />
@@ -64,7 +64,7 @@
 <p align="center">
   <a href="https://github.com/Mrakdatkom">
     <img
-      src="https://github-readme-stats.vercel.app/api?username=Mrakdatkom&show_icons=true&hide_border=true&hide=stars,prs,issues"
+      src="github-readme-stats-mrakdatkom.vercel.app"
       alt="GitHub Contribution Overview"
       width="600"
     />
