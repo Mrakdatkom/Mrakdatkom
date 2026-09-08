@@ -38,14 +38,12 @@
     alt="GitHub Stats"
     height="180"
   />
-  <img
+  <!-- <img
     src="https://streak-stats.demolab.com/?user=Mrakdatkom&hide_border=true"
     alt="GitHub Streak"
     height="180"
-  />
+  /> -->
 </p>
-
-<br />
 
 <!-- <h2 align="center">Most Used Languages</h2>
 
