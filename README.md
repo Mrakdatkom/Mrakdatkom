@@ -38,58 +38,9 @@
     alt="GitHub Stats"
     height="180"
   />
-  <!-- <img
+  <img
     src="https://streak-stats.demolab.com/?user=Mrakdatkom&hide_border=true"
     alt="GitHub Streak"
     height="180"
-  /> -->
-</p>
-
-<!-- <h2 align="center">Most Used Languages</h2>
-
-<p align="center">
-  <img
-    src="github-readme-stats-mrakdatkom.vercel.app"
-    alt="Most Used Languages"
-    height="180"
   />
 </p>
-
-<br />
-
-<h2 align="center">Contribution Activity</h2>
-
-<p align="center">
-  <a href="https://github.com/Mrakdatkom">
-    <img
-      src="github-readme-stats-mrakdatkom.vercel.app"
-      alt="GitHub Contribution Overview"
-      width="600"
-    />
-  </a>
-</p>
-
-<br />
-
-<p align="center">
-  <a href="https://github.com/Mrakdatkom">
-    <img
-      src="https://img.shields.io/github/followers/Mrakdatkom?label=Followers&style=for-the-badge"
-      alt="GitHub Followers"
-    />
-  </a>
-  <a href="https://github.com/Mrakdatkom?tab=repositories">
-    <img
-      src="https://img.shields.io/github/stars/Mrakdatkom?affiliations=OWNER&style=for-the-badge"
-      alt="GitHub Stars"
-    />
-  </a>
-  <a href="https://github.com/Mrakdatkom?tab=repositories">
-    <img
-      src="https://img.shields.io/badge/Repositories-View-black?style=for-the-badge&logo=github"
-      alt="Repositories"
-    />
-  </a>
-</p>
-
-<br /> -->
