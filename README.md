@@ -30,9 +30,9 @@
 
 <br />
 
-<h2 align="center">GitHub Analytics</h2>
+<h2 align="center">Analytics</h2>
 
-<p align="center">
+<!-- <p align="center">
   <img
     src="github-readme-stats-mrakdatkom.vercel.app"
     alt="GitHub Stats"
@@ -94,8 +94,4 @@
   </a>
 </p>
 
-<br />
-
-<p align="center">
-  <i>Building things, breaking things, and occasionally wondering why it works.</i>
-</p>
+<br /> -->
