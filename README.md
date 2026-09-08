@@ -32,7 +32,7 @@
 
 <h2 align="center">Analytics</h2>
 
-<!-- <p align="center">
+<p align="center">
   <img
     src="github-readme-stats-mrakdatkom.vercel.app"
     alt="GitHub Stats"
@@ -47,7 +47,7 @@
 
 <br />
 
-<h2 align="center">Most Used Languages</h2>
+<!-- <h2 align="center">Most Used Languages</h2>
 
 <p align="center">
   <img
