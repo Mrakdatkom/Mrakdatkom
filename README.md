@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">
+  <a href="www.linkedin.com/in/markryanbz">
     <img
       src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
       alt="LinkedIn"
@@ -30,21 +30,10 @@
 
 <br />
 
-<h2 align="center">Analytics</h2>
-
 <p align="center">
   <img
     src="https://streak-stats.demolab.com/?user=Mrakdatkom&hide_border=true"
     alt="GitHub Streak"
-    height="180"
-  />
-</p>
-
-<h2 align="center">Most Used Languages</h2>
-<p align="center">
-  <img
-    src="https://github-readme-stats-mrakdatkom.vercel.app/api/top-langs/?username=Mrakdatkom&layout=compact&langs_count=8&hide_border=true"
-    alt="Most Used Languages"
     height="180"
   />
 </p>
