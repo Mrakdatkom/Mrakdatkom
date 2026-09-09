@@ -298,7 +298,7 @@ def render_svg(
         f'</text>',
 
         f'<rect x="46" y="110" '
-        f'width="1008" height="132" '
+        f'width="1008" height="150" '
         f'rx="14" fill="{panel}" '
         f'stroke="{border}"/>',
     ]
@@ -307,19 +307,19 @@ def render_svg(
         (
             "Combined Contributions",
             combined_total,
-            170,
+            172,
             text,
         ),
         (
             "Mrakdatkom",
             primary_total,
-            420,
+            424,
             text,
         ),
         (
             "markryan3421",
             secondary_total,
-            670,
+            676,
             text,
         ),
         (
@@ -329,24 +329,24 @@ def render_svg(
             accent,
         ),
     ]
-
+    
     for label, value, x, value_color in stats:
         suffix = (
             " days"
             if label == "Current Streak"
             else ""
         )
-
+    
         svg.extend([
-            f'<text x="{x}" y="158" '
+            f'<text x="{x}" y="185" '
             f'text-anchor="middle" '
             f'fill="{value_color}" '
             f'font-family="Arial, Helvetica, sans-serif" '
             f'font-size="32" font-weight="700">'
             f'{escape(value)}{suffix}'
             f'</text>',
-
-            f'<text x="{x}" y="188" '
+    
+            f'<text x="{x}" y="218" '
             f'text-anchor="middle" '
             f'fill="{muted}" '
             f'font-family="Arial, Helvetica, sans-serif" '
@@ -354,24 +354,6 @@ def render_svg(
             f'{escape(label)}'
             f'</text>',
         ])
-
-    svg.extend([
-        f'<text x="46" y="282" '
-        f'fill="{text}" '
-        f'font-family="Arial, Helvetica, sans-serif" '
-        f'font-size="20" font-weight="700">'
-        f'Contribution Activity'
-        f'</text>',
-
-        f'<text x="1054" y="282" '
-        f'text-anchor="end" '
-        f'fill="{muted}" '
-        f'font-family="Arial, Helvetica, sans-serif" '
-        f'font-size="14">'
-        f'Longest combined streak: '
-        f'{longest_streak} days'
-        f'</text>',
-    ])
 
     cell_size = 11
     gap = 3
