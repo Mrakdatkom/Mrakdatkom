@@ -34,13 +34,23 @@
 
 <p align="center">
   <img
-    src="github-readme-stats-mrakdatkom.vercel.app"
+    src="https://github-readme-stats-mrakdatkom.vercel.app/api?username=Mrakdatkom&show_icons=true&hide_border=true"
     alt="GitHub Stats"
     height="180"
   />
   <img
     src="https://streak-stats.demolab.com/?user=Mrakdatkom&hide_border=true"
     alt="GitHub Streak"
+    height="180"
+  />
+</p>
+
+<h2 align="center">Most Used Languages</h2>
+
+<p align="center">
+  <img
+    src="https://github-readme-stats-mrakdatkom.vercel.app/api/top-langs/?username=Mrakdatkom&layout=compact&langs_count=8&hide_border=true"
+    alt="Most Used Languages"
     height="180"
   />
 </p>
