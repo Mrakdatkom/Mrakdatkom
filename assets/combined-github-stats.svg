@@ -10,7 +10,7 @@
 <text x="424" y="218" text-anchor="middle" fill="#8b949e" font-family="Arial, Helvetica, sans-serif" font-size="14">Mrakdatkom</text>
 <text x="676" y="185" text-anchor="middle" fill="#f0f6fc" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">321</text>
 <text x="676" y="218" text-anchor="middle" fill="#8b949e" font-family="Arial, Helvetica, sans-serif" font-size="14">markryan3421</text>
-<text x="930" y="185" text-anchor="middle" fill="#58a6ff" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">8 days</text>
+<text x="930" y="185" text-anchor="middle" fill="#468f3b" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">8 days</text>
 <text x="930" y="218" text-anchor="middle" fill="#8b949e" font-family="Arial, Helvetica, sans-serif" font-size="14">Current Streak</text>
 <rect x="48" y="312" width="11" height="11" rx="2" fill="#21262d"><title>2025-09-07: 0 contributions</title></rect>
 <rect x="48" y="326" width="11" height="11" rx="2" fill="#21262d"><title>2025-09-08: 0 contributions</title></rect>
@@ -381,5 +381,4 @@
 <rect x="776" y="340" width="11" height="11" rx="2" fill="#0e4429"><title>2026-09-08: 5 contributions</title></rect>
 <rect x="776" y="354" width="11" height="11" rx="2" fill="#39d353"><title>2026-09-09: 21 contributions</title></rect>
 <text x="48" y="430" fill="#8b949e" font-family="Arial, Helvetica, sans-serif" font-size="13">Combined activity from both GitHub accounts</text>
-<text x="48" y="452" fill="#8b949e" font-family="Arial, Helvetica, sans-serif" font-size="13">Updated automatically by GitHub Actions</text>
 </svg>
