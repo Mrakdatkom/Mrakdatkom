@@ -226,7 +226,7 @@ def render_svg(
     border = "#30363d"
     text = "#f0f6fc"
     muted = "#8b949e"
-    accent = "#58a6ff"
+    accent = "#468f3b"
 
     greens = [
         "#21262d",
@@ -413,14 +413,6 @@ def render_svg(
         f'font-size="13">'
         f'Combined activity from both GitHub accounts'
         f'</text>',
-
-        f'<text x="48" y="452" '
-        f'fill="{muted}" '
-        f'font-family="Arial, Helvetica, sans-serif" '
-        f'font-size="13">'
-        f'Updated automatically by GitHub Actions'
-        f'</text>',
-
         '</svg>',
     ])
 
