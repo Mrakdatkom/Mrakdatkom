@@ -31,14 +31,6 @@
 
 <p align="center">
   <img
-    src="https://streak-stats.demolab.com/?user=Mrakdatkom&hide_border=true"
-    alt="GitHub Streak"
-    height="180"
-  />
-</p>
-
-<p align="center">
-  <img
     src="./assets/combined-github-stats.svg"
     alt="Combined GitHub Activity"
     width="900"
