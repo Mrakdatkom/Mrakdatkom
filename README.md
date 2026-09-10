@@ -1,7 +1,7 @@
 <h1 align="center">my back hurts...</h1>
 
 <p align="center">
-  <img src="./assets/react-2.svg" alt="React JS" width="60" height="60" style="margin: 12px 0;" />
+  <img src="./assets/react-2.svg" alt="React JS" width="60" height="60" /> &emsp;
   <img src="./assets/astro-2.svg" alt="Astro" width="60" height="60" style="margin: 12px 0;" />
   <img src="./assets/gsap-4.svg" alt="GSAP" width="60" height="60" style="margin: 12px 0;" />
   <img src="./assets/laravel-2.svg" alt="Laravel" width="60" height="60" style="margin: 12px 0;" />
