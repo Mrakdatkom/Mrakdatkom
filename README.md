@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="JavaScript" width="60" height="60" />
-  <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React JS" width="60" height="60" />
+  <img src="./assets/react-2.svg" alt="React JS" width="60" height="60" />
   <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" width="60" height="60" />
   <img src="https://www.vectorlogo.zone/logos/astrobuild/astrobuild-icon.svg" alt="Astro" width="60" height="60" />
   <img src="https://github.com/user-attachments/assets/4e42bd0f-29d0-4b6b-95a7-88a2d8052f6e" alt="GSAP" width="60" height="60" />
