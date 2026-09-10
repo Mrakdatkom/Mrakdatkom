@@ -1,12 +1,12 @@
 <h1 align="center">my back hurts...</h1>
 
 <p align="center">
-  <img src="./assets/react-2.svg" alt="React JS" width="60" height="60" style="margin: 0 12px;" />
-  <img src="./assets/astro-2.svg" alt="Astro" width="60" height="60" style="margin: 0 12px;" />
-  <img src="./assets/gsap-4.svg" alt="GSAP" width="60" height="60" style="margin: 0 12px;" />
-  <img src="./assets/laravel-2.svg" alt="Laravel" width="60" height="60" style="margin: 0 12px;" />
-  <img src="./assets/express-2.svg" alt="Express JS" width="60" height="60" style="margin: 0 12px;" />
-  <img src="./assets/vercel.svg" alt="Vercel" width="60" height="60" style="margin: 0 12px;" />
+  <img src="./assets/react-2.svg" alt="React JS" width="60" height="60" style="margin: 12px 0;" />
+  <img src="./assets/astro-2.svg" alt="Astro" width="60" height="60" style="margin: 12px 0;" />
+  <img src="./assets/gsap-4.svg" alt="GSAP" width="60" height="60" style="margin: 12px 0;" />
+  <img src="./assets/laravel-2.svg" alt="Laravel" width="60" height="60" style="margin: 12px 0;" />
+  <img src="./assets/express-2.svg" alt="Express JS" width="60" height="60" style="margin: 12px 0;" />
+  <img src="./assets/vercel.svg" alt="Vercel" width="60" height="60" style="margin: 12px 0;" />
 </p>
 
 <p align="center">
