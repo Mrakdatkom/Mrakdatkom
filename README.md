@@ -1,4 +1,4 @@
-<h1 align="center">my back hurts...</h1>
+<h1 align="center">My back hurts...</h1>
 
 <p align="center">
   <img src="./assets/react-2.svg" alt="React JS" width="60" height="60" /> &emsp;
