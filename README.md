@@ -12,7 +12,7 @@
   <img src="./assets/typescript.svg" alt="Typescript" width="60" height="60" style="margin: 12px 0;" /> &emsp;
 </p>
 
-<p align="center">
+<p align="center"> 
   <a href="www.linkedin.com/in/markryanbz">
     <img
       src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
