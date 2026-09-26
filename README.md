@@ -25,7 +25,7 @@
       alt="Portfolio"
     />
   </a>
-</p>
+</p> 
 
 <br />
 
