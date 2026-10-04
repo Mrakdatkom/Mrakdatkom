@@ -11,7 +11,7 @@
   <img src="./assets/mongodb.svg" alt="MongoDB" width="60" height="60" style="margin: 12px 0;" /> &emsp;
   <img src="./assets/typescript.svg" alt="Typescript" width="60" height="60" style="margin: 12px 0;" /> &emsp;
 </p>  
-
+ 
 <p align="center"> 
   <a href="www.linkedin.com/in/markryanbz">
     <img
