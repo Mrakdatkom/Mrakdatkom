@@ -9,7 +9,7 @@ import requests
 API_URL = "https://api.github.com/graphql"
 
 USERS = [
-    "Mrakdatkom",
+    "dvmark3",
     "markryan3421",
 ]
 
@@ -294,7 +294,7 @@ def render_svg(
         f'fill="{muted}" '
         f'font-family="Arial, Helvetica, sans-serif" '
         f'font-size="15">'
-        f'@Mrakdatkom + @markryan3421'
+        f'@dvmark3 + @markryan3421'
         f'</text>',
 
         f'<rect x="46" y="110" '
@@ -311,7 +311,7 @@ def render_svg(
             text,
         ),
         (
-            "Mrakdatkom",
+            "dvmark3",
             primary_total,
             424,
             text,
@@ -445,7 +445,7 @@ def main():
             )
 
     primary_total = account_totals[
-        "Mrakdatkom"
+        "dvmark3"
     ]
 
     secondary_total = account_totals[
@@ -485,7 +485,7 @@ def main():
     )
 
     print(
-        f"Mrakdatkom: {primary_total}"
+        f"dvmark3: {primary_total}"
     )
 
     print(
