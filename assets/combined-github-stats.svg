@@ -377,11 +377,11 @@
 <rect x="1036.38" y="331.38" width="15.38" height="15.38" rx="2" fill="#2f3d10"><title>2026-10-26: 6 contributions</title></rect>
 <rect x="1036.38" y="350.76" width="15.38" height="15.38" rx="2" fill="#587a14"><title>2026-10-27: 17 contributions</title></rect>
 <text x="48" y="475" fill="#8a8a8a" text-anchor="start" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">BOTH ACCOUNTS, MERGED</text>
-<text x="926" y="475" fill="#8a8a8a" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">LESS</text>
-<rect x="936" y="465" width="12" height="12" rx="2" fill="#17181b"/>
-<rect x="952" y="465" width="12" height="12" rx="2" fill="#2f3d10"/>
-<rect x="968" y="465" width="12" height="12" rx="2" fill="#587a14"/>
-<rect x="984" y="465" width="12" height="12" rx="2" fill="#8fc21f"/>
-<rect x="1000" y="465" width="12" height="12" rx="2" fill="#c6ff3d"/>
+<text x="892" y="475" fill="#8a8a8a" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">LESS</text>
+<rect x="904" y="465" width="12" height="12" rx="2" fill="#17181b"/>
+<rect x="920" y="465" width="12" height="12" rx="2" fill="#2f3d10"/>
+<rect x="936" y="465" width="12" height="12" rx="2" fill="#587a14"/>
+<rect x="952" y="465" width="12" height="12" rx="2" fill="#8fc21f"/>
+<rect x="968" y="465" width="12" height="12" rx="2" fill="#c6ff3d"/>
 <text x="1052" y="475" fill="#8a8a8a" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">MORE</text>
 </svg>
