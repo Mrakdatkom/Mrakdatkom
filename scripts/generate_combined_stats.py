@@ -397,8 +397,8 @@ def render_svg(
             f'<rect x="{936 + i * 16}" y="465" '
             f'width="12" height="12" rx="2" fill="{color}"/>'
         )
-        
-    svg.append(label(1052, 475, "  More", muted, "end"))
+    
+    svg.append(label(1052, 475, "More", muted, "end"))
 
     svg.append('</svg>')
 
