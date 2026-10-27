@@ -221,19 +221,16 @@ def render_svg(
     width = 1100
     height = 500
 
-    background = "#0d1117"
-    panel = "#161b22"
-    border = "#30363d"
-    text = "#f0f6fc"
-    muted = "#8b949e"
-    accent = "#468f3b"
+    text = "#f8fafc"
+    muted = "#94a3b8"
 
-    greens = [
-        "#21262d",
-        "#0e4429",
-        "#006d32",
-        "#26a641",
-        "#39d353",
+    # Heatmap ramp: empty -> teal -> green
+    heat = [
+        "#1a2238",
+        "#0f4c5c",
+        "#0e7c86",
+        "#14b8a6",
+        "#4ade80",
     ]
 
     dates = [
@@ -274,78 +271,127 @@ def render_svg(
         f'width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}">',
 
-        f'<rect width="100%" height="100%" '
-        f'rx="18" fill="{background}"/>',
+        '<defs>',
 
+        '<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">'
+        '<stop offset="0" stop-color="#070b1a"/>'
+        '<stop offset="0.55" stop-color="#0d1030"/>'
+        '<stop offset="1" stop-color="#08202b"/>'
+        '</linearGradient>',
+
+        '<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">'
+        '<stop offset="0" stop-color="#2dd4bf" stop-opacity="0.75"/>'
+        '<stop offset="0.5" stop-color="#818cf8" stop-opacity="0.35"/>'
+        '<stop offset="1" stop-color="#4ade80" stop-opacity="0.75"/>'
+        '</linearGradient>',
+
+        '<linearGradient id="title" x1="0" y1="0" x2="1" y2="0">'
+        '<stop offset="0" stop-color="#ffffff"/>'
+        '<stop offset="0.6" stop-color="#a5f3fc"/>'
+        '<stop offset="1" stop-color="#c4b5fd"/>'
+        '</linearGradient>',
+
+        '<linearGradient id="num" x1="0" y1="0" x2="1" y2="1">'
+        '<stop offset="0" stop-color="#ffffff"/>'
+        '<stop offset="1" stop-color="#99f6e4"/>'
+        '</linearGradient>',
+
+        '<linearGradient id="streak" x1="0" y1="0" x2="1" y2="1">'
+        '<stop offset="0" stop-color="#4ade80"/>'
+        '<stop offset="1" stop-color="#2dd4bf"/>'
+        '</linearGradient>',
+
+        '<filter id="blur" x="-50%" y="-50%" '
+        'width="200%" height="200%">'
+        '<feGaussianBlur stdDeviation="60"/>'
+        '</filter>',
+
+        '<filter id="glow" x="-100%" y="-100%" '
+        'width="300%" height="300%">'
+        '<feGaussianBlur stdDeviation="2.5" result="b"/>'
+        '<feMerge>'
+        '<feMergeNode in="b"/>'
+        '<feMergeNode in="SourceGraphic"/>'
+        '</feMerge>'
+        '</filter>',
+
+        f'<clipPath id="card">'
+        f'<rect width="{width}" height="{height}" rx="18"/>'
+        f'</clipPath>',
+
+        '</defs>',
+
+        # Background + aurora glows, clipped to the rounded card
+        '<g clip-path="url(#card)">',
+        f'<rect width="{width}" height="{height}" fill="url(#bg)"/>',
+        '<circle cx="140" cy="40" r="220" fill="#14b8a6" '
+        'opacity="0.28" filter="url(#blur)"/>',
+        '<circle cx="980" cy="120" r="240" fill="#6366f1" '
+        'opacity="0.30" filter="url(#blur)"/>',
+        '<circle cx="620" cy="480" r="260" fill="#22c55e" '
+        'opacity="0.16" filter="url(#blur)"/>',
+        '</g>',
+
+        # Card border
         f'<rect x="1" y="1" '
-        f'width="{width - 2}" '
-        f'height="{height - 2}" '
-        f'rx="18" fill="none" '
-        f'stroke="{border}"/>',
+        f'width="{width - 2}" height="{height - 2}" '
+        f'rx="18" fill="none" stroke="url(#edge)" '
+        f'stroke-opacity="0.6"/>',
 
-        f'<text x="46" y="55" '
-        f'fill="{text}" '
+        # Title
+        f'<text x="46" y="55" fill="url(#title)" '
         f'font-family="Arial, Helvetica, sans-serif" '
         f'font-size="28" font-weight="700">'
         f'Combined GitHub Activity'
         f'</text>',
 
-        f'<text x="46" y="82" '
-        f'fill="{muted}" '
+        f'<text x="46" y="82" fill="{muted}" '
         f'font-family="Arial, Helvetica, sans-serif" '
         f'font-size="15">'
         f'@dvmark3 + @markryan3421'
         f'</text>',
 
-        f'<rect x="46" y="110" '
-        f'width="1008" height="150" '
-        f'rx="14" fill="{panel}" '
-        f'stroke="{border}"/>',
+        # Frosted glass panel
+        '<rect x="46" y="110" width="1008" height="150" '
+        'rx="14" fill="#ffffff" fill-opacity="0.06" '
+        'stroke="url(#edge)" stroke-width="1.2"/>',
+
+        # Top highlight for the glass effect
+        '<line x1="62" y1="111" x2="1038" y2="111" '
+        'stroke="#ffffff" stroke-opacity="0.18"/>',
+
+        # Soft dividers between stats
+        '<line x1="298" y1="140" x2="298" y2="230" '
+        'stroke="#ffffff" stroke-opacity="0.08"/>',
+        '<line x1="550" y1="140" x2="550" y2="230" '
+        'stroke="#ffffff" stroke-opacity="0.08"/>',
+        '<line x1="803" y1="140" x2="803" y2="230" '
+        'stroke="#ffffff" stroke-opacity="0.08"/>',
     ]
 
     stats = [
-        (
-            "Combined Contributions",
-            combined_total,
-            172,
-            text,
-        ),
-        (
-            "dvmark3",
-            primary_total,
-            424,
-            text,
-        ),
-        (
-            "markryan3421",
-            secondary_total,
-            676,
-            text,
-        ),
-        (
-            "Current Streak",
-            current_streak,
-            930,
-            accent,
-        ),
+        ("Combined Contributions", combined_total, 172, "url(#num)"),
+        ("dvmark3", primary_total, 424, "url(#num)"),
+        ("markryan3421", secondary_total, 676, "url(#num)"),
+        ("Current Streak", current_streak, 930, "url(#streak)"),
     ]
-    
-    for label, value, x, value_color in stats:
+
+    for label, value, x, value_fill in stats:
         suffix = (
             " days"
             if label == "Current Streak"
             else ""
         )
-    
+
         svg.extend([
             f'<text x="{x}" y="185" '
             f'text-anchor="middle" '
-            f'fill="{value_color}" '
+            f'fill="{value_fill}" '
             f'font-family="Arial, Helvetica, sans-serif" '
             f'font-size="32" font-weight="700">'
             f'{escape(value)}{suffix}'
             f'</text>',
-    
+
             f'<text x="{x}" y="218" '
             f'text-anchor="middle" '
             f'fill="{muted}" '
@@ -354,15 +400,11 @@ def render_svg(
             f'{escape(label)}'
             f'</text>',
         ])
-        
-        gap = 4
-        columns = 52
-        grid_width = 1004  # x=48 to x=1052, inside the panel (46 to 1054)
-        cell_size = round((grid_width - (columns - 1) * gap) / columns, 2)
 
-    first_day = start - dt.timedelta(
-        days=(start.weekday() + 1) % 7
-    )
+    gap = 4
+    columns = 52
+    grid_width = 1004  # x=48 to x=1052, inside the panel (46 to 1054)
+    cell_size = round((grid_width - (columns - 1) * gap) / columns, 2)
 
     days_since_sunday = (today.weekday() + 1) % 7
     first_day = today - dt.timedelta(
@@ -397,13 +439,14 @@ def render_svg(
         else:
             count = 0
 
-        color = greens[level(count)]
+        lvl = level(count)
+        glow = ' filter="url(#glow)"' if lvl >= 3 else ""
 
         svg.append(
             f'<rect x="{x}" y="{y}" '
             f'width="{cell_size}" '
             f'height="{cell_size}" '
-            f'rx="2" fill="{color}">'
+            f'rx="3" fill="{heat[lvl]}"{glow}>'
             f'<title>'
             f'{escape(current_day.isoformat())}: '
             f'{count} contributions'
