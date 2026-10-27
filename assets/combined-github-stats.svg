@@ -1,16 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="500" viewBox="0 0 1100 500">
 <rect width="100%" height="100%" rx="18" fill="#0a0a0a"/>
 <rect x="1" y="1" width="1098" height="498" rx="18" fill="none" stroke="#2a2a2a"/>
-<rect x="48" y="40" width="10" height="10" fill="#c6ff3d"/>
 <text x="68" y="50" fill="#fafafa" text-anchor="start" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">COMBINED GITHUB ACTIVITY</text>
-<text x="1052" y="50" fill="#8a8a8a" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">@DVMARK3 + @MARKRYAN3421</text>
 <line x1="48" y1="72" x2="1052" y2="72" stroke="#2a2a2a"/>
-<text x="44" y="190" fill="#fafafa" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="124" font-weight="800" letter-spacing="-5">1046</text>
+<text x="44" y="190" fill="#fafafa" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="124" font-weight="800" letter-spacing="-5">1047</text>
 <text x="48" y="226" fill="#c6ff3d" text-anchor="start" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">CONTRIBUTIONS, COMBINED</text>
 <line x1="496" y1="100" x2="496" y2="226" stroke="#2a2a2a"/>
 <line x1="676" y1="100" x2="676" y2="226" stroke="#2a2a2a"/>
 <line x1="856" y1="100" x2="856" y2="226" stroke="#2a2a2a"/>
-<text x="520" y="176" fill="#fafafa" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="42" font-weight="800" letter-spacing="-1">726</text>
+<text x="520" y="176" fill="#fafafa" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="42" font-weight="800" letter-spacing="-1">727</text>
 <text x="520" y="204" fill="#8a8a8a" text-anchor="start" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">DVMARK3</text>
 <text x="700" y="176" fill="#fafafa" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="42" font-weight="800" letter-spacing="-1">320</text>
 <text x="700" y="204" fill="#8a8a8a" text-anchor="start" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">MARKRYAN3421</text>
@@ -377,7 +375,7 @@
 <rect x="1017.0000000000001" y="428.28000000000003" width="15.38" height="15.38" rx="2" fill="#2f3d10"><title>2026-10-24: 4 contributions</title></rect>
 <rect x="1036.38" y="312.0" width="15.38" height="15.38" rx="2" fill="#8fc21f"><title>2026-10-25: 25 contributions</title></rect>
 <rect x="1036.38" y="331.38" width="15.38" height="15.38" rx="2" fill="#2f3d10"><title>2026-10-26: 6 contributions</title></rect>
-<rect x="1036.38" y="350.76" width="15.38" height="15.38" rx="2" fill="#587a14"><title>2026-10-27: 15 contributions</title></rect>
+<rect x="1036.38" y="350.76" width="15.38" height="15.38" rx="2" fill="#587a14"><title>2026-10-27: 16 contributions</title></rect>
 <text x="48" y="475" fill="#8a8a8a" text-anchor="start" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">BOTH ACCOUNTS, MERGED</text>
 <text x="926" y="475" fill="#8a8a8a" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">LESS</text>
 <rect x="936" y="465" width="12" height="12" rx="2" fill="#17181b"/>
@@ -385,5 +383,5 @@
 <rect x="968" y="465" width="12" height="12" rx="2" fill="#587a14"/>
 <rect x="984" y="465" width="12" height="12" rx="2" fill="#8fc21f"/>
 <rect x="1000" y="465" width="12" height="12" rx="2" fill="#c6ff3d"/>
-<text x="1052" y="475" fill="#8a8a8a" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">MORE</text>
+<text x="1052" y="475" fill="#8a8a8a" text-anchor="end" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">  MORE</text>
 </svg>
