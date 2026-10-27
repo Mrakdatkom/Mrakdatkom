@@ -294,9 +294,7 @@ def render_svg(
         f'rx="18" fill="none" stroke="{line}"/>',
 
         # Header row
-        f'<rect x="48" y="40" width="10" height="10" fill="{accent}"/>',
         label(68, 50, "Combined GitHub Activity", text),
-        label(1052, 50, "@dvmark3 + @markryan3421", muted, "end"),
 
         f'<line x1="48" y1="72" x2="1052" y2="72" stroke="{line}"/>',
 
@@ -399,8 +397,8 @@ def render_svg(
             f'<rect x="{936 + i * 16}" y="465" '
             f'width="12" height="12" rx="2" fill="{color}"/>'
         )
-
-    svg.append(label(1052, 475, "More", muted, "end"))
+        
+    svg.append(label(1052, 475, "  More", muted, "end"))
 
     svg.append('</svg>')
 
