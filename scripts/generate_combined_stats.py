@@ -221,17 +221,22 @@ def render_svg(
     width = 1100
     height = 500
 
-    text = "#f8fafc"
-    muted = "#94a3b8"
+    background = "#0a0a0a"
+    line = "#2a2a2a"
+    text = "#fafafa"
+    muted = "#8a8a8a"
+    accent = "#c6ff3d"
 
-    # Heatmap ramp: empty -> teal -> green
+    # Single-hue ramp: empty -> dark olive -> lime
     heat = [
-        "#1a2238",
-        "#0f4c5c",
-        "#0e7c86",
-        "#14b8a6",
-        "#4ade80",
+        "#17181b",
+        "#2f3d10",
+        "#587a14",
+        "#8fc21f",
+        accent,
     ]
+
+    font = "'Helvetica Neue', Helvetica, Arial, sans-serif"
 
     dates = [
         start + dt.timedelta(days=i)
@@ -266,144 +271,75 @@ def render_svg(
 
         return 4
 
+    def label(x, y, content, fill=muted, anchor="start", size=12):
+        return (
+            f'<text x="{x}" y="{y}" fill="{fill}" '
+            f'text-anchor="{anchor}" '
+            f'font-family="{font}" font-size="{size}" '
+            f'font-weight="600" letter-spacing="2.5">'
+            f'{escape(content.upper())}'
+            f'</text>'
+        )
+
     svg = [
         f'<svg xmlns="http://www.w3.org/2000/svg" '
         f'width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}">',
 
-        '<defs>',
+        f'<rect width="100%" height="100%" '
+        f'rx="18" fill="{background}"/>',
 
-        '<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">'
-        '<stop offset="0" stop-color="#070b1a"/>'
-        '<stop offset="0.55" stop-color="#0d1030"/>'
-        '<stop offset="1" stop-color="#08202b"/>'
-        '</linearGradient>',
-
-        '<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">'
-        '<stop offset="0" stop-color="#2dd4bf" stop-opacity="0.75"/>'
-        '<stop offset="0.5" stop-color="#818cf8" stop-opacity="0.35"/>'
-        '<stop offset="1" stop-color="#4ade80" stop-opacity="0.75"/>'
-        '</linearGradient>',
-
-        '<linearGradient id="title" x1="0" y1="0" x2="1" y2="0">'
-        '<stop offset="0" stop-color="#ffffff"/>'
-        '<stop offset="0.6" stop-color="#a5f3fc"/>'
-        '<stop offset="1" stop-color="#c4b5fd"/>'
-        '</linearGradient>',
-
-        '<linearGradient id="num" x1="0" y1="0" x2="1" y2="1">'
-        '<stop offset="0" stop-color="#ffffff"/>'
-        '<stop offset="1" stop-color="#99f6e4"/>'
-        '</linearGradient>',
-
-        '<linearGradient id="streak" x1="0" y1="0" x2="1" y2="1">'
-        '<stop offset="0" stop-color="#4ade80"/>'
-        '<stop offset="1" stop-color="#2dd4bf"/>'
-        '</linearGradient>',
-
-        '<filter id="blur" x="-50%" y="-50%" '
-        'width="200%" height="200%">'
-        '<feGaussianBlur stdDeviation="60"/>'
-        '</filter>',
-
-        '<filter id="glow" x="-100%" y="-100%" '
-        'width="300%" height="300%">'
-        '<feGaussianBlur stdDeviation="2.5" result="b"/>'
-        '<feMerge>'
-        '<feMergeNode in="b"/>'
-        '<feMergeNode in="SourceGraphic"/>'
-        '</feMerge>'
-        '</filter>',
-
-        f'<clipPath id="card">'
-        f'<rect width="{width}" height="{height}" rx="18"/>'
-        f'</clipPath>',
-
-        '</defs>',
-
-        # Background + aurora glows, clipped to the rounded card
-        '<g clip-path="url(#card)">',
-        f'<rect width="{width}" height="{height}" fill="url(#bg)"/>',
-        '<circle cx="140" cy="40" r="220" fill="#14b8a6" '
-        'opacity="0.28" filter="url(#blur)"/>',
-        '<circle cx="980" cy="120" r="240" fill="#6366f1" '
-        'opacity="0.30" filter="url(#blur)"/>',
-        '<circle cx="620" cy="480" r="260" fill="#22c55e" '
-        'opacity="0.16" filter="url(#blur)"/>',
-        '</g>',
-
-        # Card border
         f'<rect x="1" y="1" '
         f'width="{width - 2}" height="{height - 2}" '
-        f'rx="18" fill="none" stroke="url(#edge)" '
-        f'stroke-opacity="0.6"/>',
+        f'rx="18" fill="none" stroke="{line}"/>',
 
-        # Title
-        f'<text x="46" y="55" fill="url(#title)" '
-        f'font-family="Arial, Helvetica, sans-serif" '
-        f'font-size="28" font-weight="700">'
-        f'Combined GitHub Activity'
+        # Header row
+        f'<rect x="48" y="40" width="10" height="10" fill="{accent}"/>',
+        label(68, 50, "Combined GitHub Activity", text),
+        label(1052, 50, "@dvmark3 + @markryan3421", muted, "end"),
+
+        f'<line x1="48" y1="72" x2="1052" y2="72" stroke="{line}"/>',
+
+        # Hero number
+        f'<text x="44" y="190" fill="{text}" '
+        f'font-family="{font}" font-size="124" '
+        f'font-weight="800" letter-spacing="-5">'
+        f'{escape(combined_total)}'
         f'</text>',
 
-        f'<text x="46" y="82" fill="{muted}" '
-        f'font-family="Arial, Helvetica, sans-serif" '
-        f'font-size="15">'
-        f'@dvmark3 + @markryan3421'
-        f'</text>',
+        label(48, 226, "Contributions, combined", accent),
 
-        # Frosted glass panel
-        '<rect x="46" y="110" width="1008" height="150" '
-        'rx="14" fill="#ffffff" fill-opacity="0.06" '
-        'stroke="url(#edge)" stroke-width="1.2"/>',
-
-        # Top highlight for the glass effect
-        '<line x1="62" y1="111" x2="1038" y2="111" '
-        'stroke="#ffffff" stroke-opacity="0.18"/>',
-
-        # Soft dividers between stats
-        '<line x1="298" y1="140" x2="298" y2="230" '
-        'stroke="#ffffff" stroke-opacity="0.08"/>',
-        '<line x1="550" y1="140" x2="550" y2="230" '
-        'stroke="#ffffff" stroke-opacity="0.08"/>',
-        '<line x1="803" y1="140" x2="803" y2="230" '
-        'stroke="#ffffff" stroke-opacity="0.08"/>',
+        # Vertical dividers for the supporting stats
+        f'<line x1="496" y1="100" x2="496" y2="226" stroke="{line}"/>',
+        f'<line x1="676" y1="100" x2="676" y2="226" stroke="{line}"/>',
+        f'<line x1="856" y1="100" x2="856" y2="226" stroke="{line}"/>',
     ]
 
     stats = [
-        ("Combined Contributions", combined_total, 172, "url(#num)"),
-        ("dvmark3", primary_total, 424, "url(#num)"),
-        ("markryan3421", secondary_total, 676, "url(#num)"),
-        ("Current Streak", current_streak, 930, "url(#streak)"),
+        ("dvmark3", primary_total, 520, text),
+        ("markryan3421", secondary_total, 700, text),
+        ("Current streak", f"{current_streak} days", 880, accent),
     ]
 
-    for label, value, x, value_fill in stats:
-        suffix = (
-            " days"
-            if label == "Current Streak"
-            else ""
-        )
-
+    for name, value, x, value_fill in stats:
         svg.extend([
-            f'<text x="{x}" y="185" '
-            f'text-anchor="middle" '
-            f'fill="{value_fill}" '
-            f'font-family="Arial, Helvetica, sans-serif" '
-            f'font-size="32" font-weight="700">'
-            f'{escape(value)}{suffix}'
+            f'<text x="{x}" y="176" fill="{value_fill}" '
+            f'font-family="{font}" font-size="42" '
+            f'font-weight="800" letter-spacing="-1">'
+            f'{escape(value)}'
             f'</text>',
 
-            f'<text x="{x}" y="218" '
-            f'text-anchor="middle" '
-            f'fill="{muted}" '
-            f'font-family="Arial, Helvetica, sans-serif" '
-            f'font-size="14">'
-            f'{escape(label)}'
-            f'</text>',
+            label(x, 204, name),
         ])
+
+    svg.extend([
+        f'<line x1="48" y1="256" x2="1052" y2="256" stroke="{line}"/>',
+        label(48, 290, "Last 52 weeks"),
+    ])
 
     gap = 4
     columns = 52
-    grid_width = 1004  # x=48 to x=1052, inside the panel (46 to 1054)
+    grid_width = 1004  # x=48 to x=1052
     cell_size = round((grid_width - (columns - 1) * gap) / columns, 2)
 
     days_since_sunday = (today.weekday() + 1) % 7
@@ -439,14 +375,11 @@ def render_svg(
         else:
             count = 0
 
-        lvl = level(count)
-        glow = ' filter="url(#glow)"' if lvl >= 3 else ""
-
         svg.append(
             f'<rect x="{x}" y="{y}" '
             f'width="{cell_size}" '
             f'height="{cell_size}" '
-            f'rx="3" fill="{heat[lvl]}"{glow}>'
+            f'rx="2" fill="{heat[level(count)]}">'
             f'<title>'
             f'{escape(current_day.isoformat())}: '
             f'{count} contributions'
@@ -456,15 +389,20 @@ def render_svg(
 
         current_day += dt.timedelta(days=1)
 
-    svg.extend([
-        f'<text x="48" y="475" '
-        f'fill="{muted}" '
-        f'font-family="Arial, Helvetica, sans-serif" '
-        f'font-size="13">'
-        f'Combined activity from both GitHub accounts'
-        f'</text>',
-        '</svg>',
-    ])
+    # Footer: caption on the left, Less/More legend on the right
+    svg.append(label(48, 475, "Both accounts, merged"))
+
+    svg.append(label(926, 475, "Less", muted, "end"))
+
+    for i, color in enumerate(heat):
+        svg.append(
+            f'<rect x="{936 + i * 16}" y="465" '
+            f'width="12" height="12" rx="2" fill="{color}"/>'
+        )
+
+    svg.append(label(1052, 475, "More", muted, "end"))
+
+    svg.append('</svg>')
 
     return "\n".join(svg)
 
