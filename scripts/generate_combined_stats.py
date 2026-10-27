@@ -354,19 +354,20 @@ def render_svg(
             f'{escape(label)}'
             f'</text>',
         ])
+        
+        gap = 4
+        columns = 52
+        grid_width = 1004  # x=48 to x=1052, inside the panel (46 to 1054)
+        cell_size = round((grid_width - (columns - 1) * gap) / columns, 2)
 
-        cell_size = 11
-    gap = 3
-
-    # Calculate the first day to display (Sunday of the week containing start date)
-    # But ensure we show exactly the last 365 days ending today
     first_day = start - dt.timedelta(
         days=(start.weekday() + 1) % 7
     )
 
-    # Better approach: Calculate from today backwards to ensure proper alignment
     days_since_sunday = (today.weekday() + 1) % 7
-    first_day = today - dt.timedelta(days=364 + days_since_sunday)
+    first_day = today - dt.timedelta(
+        days=days_since_sunday + (columns - 1) * 7
+    )
 
     current_day = first_day
 
@@ -413,7 +414,7 @@ def render_svg(
         current_day += dt.timedelta(days=1)
 
     svg.extend([
-        f'<text x="48" y="430" '
+        f'<text x="48" y="475" '
         f'fill="{muted}" '
         f'font-family="Arial, Helvetica, sans-serif" '
         f'font-size="13">'
