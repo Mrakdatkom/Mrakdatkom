@@ -122,16 +122,35 @@ def collect_account(token, username):
     today = dt.datetime.now(
         dt.timezone.utc
     ).date()
-    
-    # Only fetch the last 365 days
-    start_date = today - dt.timedelta(days=364)
 
-    total, days = get_contributions(
+    created = get_account_created_at(
         token,
         username,
-        start_date,
-        today,
     )
+
+    current = created
+    total = 0
+    days = {}
+
+    while current <= today:
+        end = min(
+            current + dt.timedelta(days=364),
+            today,
+        )
+
+        chunk_total, chunk_days = get_contributions(
+            token,
+            username,
+            current,
+            end,
+        )
+
+        total += chunk_total
+
+        for date, count in chunk_days.items():
+            days[date] = count
+
+        current = end + dt.timedelta(days=1)
 
     return total, days
 
@@ -336,12 +355,18 @@ def render_svg(
             f'</text>',
         ])
 
-    cell_size = 11
+        cell_size = 11
     gap = 3
 
+    # Calculate the first day to display (Sunday of the week containing start date)
+    # But ensure we show exactly the last 365 days ending today
     first_day = start - dt.timedelta(
         days=(start.weekday() + 1) % 7
     )
+
+    # Better approach: Calculate from today backwards to ensure proper alignment
+    days_since_sunday = (today.weekday() + 1) % 7
+    first_day = today - dt.timedelta(days=364 + days_since_sunday)
 
     current_day = first_day
 
