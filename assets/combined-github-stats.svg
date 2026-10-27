@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="500" viewBox="0 0 1100 500">
 <rect width="100%" height="100%" rx="18" fill="#0a0a0a"/>
 <rect x="1" y="1" width="1098" height="498" rx="18" fill="none" stroke="#2a2a2a"/>
-<text x="68" y="50" fill="#fafafa" text-anchor="start" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">COMBINED GITHUB ACTIVITY</text>
+<text x="48" y="50" fill="#fafafa" text-anchor="start" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">COMBINED GITHUB ACTIVITY</text>
 <line x1="48" y1="72" x2="1052" y2="72" stroke="#2a2a2a"/>
 <text x="44" y="190" fill="#fafafa" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="124" font-weight="800" letter-spacing="-5">1047</text>
 <text x="48" y="226" fill="#c6ff3d" text-anchor="start" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5">CONTRIBUTIONS, COMBINED</text>
