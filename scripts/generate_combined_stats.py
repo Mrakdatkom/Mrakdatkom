@@ -122,35 +122,16 @@ def collect_account(token, username):
     today = dt.datetime.now(
         dt.timezone.utc
     ).date()
+    
+    # Only fetch the last 365 days
+    start_date = today - dt.timedelta(days=364)
 
-    created = get_account_created_at(
+    total, days = get_contributions(
         token,
         username,
+        start_date,
+        today,
     )
-
-    current = created
-    total = 0
-    days = {}
-
-    while current <= today:
-        end = min(
-            current + dt.timedelta(days=364),
-            today,
-        )
-
-        chunk_total, chunk_days = get_contributions(
-            token,
-            username,
-            current,
-            end,
-        )
-
-        total += chunk_total
-
-        for date, count in chunk_days.items():
-            days[date] = count
-
-        current = end + dt.timedelta(days=1)
 
     return total, days
 
