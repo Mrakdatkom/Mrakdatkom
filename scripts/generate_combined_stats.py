@@ -294,7 +294,7 @@ def render_svg(
         f'rx="18" fill="none" stroke="{line}"/>',
 
         # Header row
-        label(68, 50, "Combined GitHub Activity", text),
+        label(48, 50, "Combined GitHub Activity", text),
 
         f'<line x1="48" y1="72" x2="1052" y2="72" stroke="{line}"/>',
 
