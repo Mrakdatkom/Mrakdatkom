@@ -390,11 +390,11 @@ def render_svg(
     # Footer: caption on the left, Less/More legend on the right
     svg.append(label(48, 475, "Both accounts, merged"))
 
-    svg.append(label(926, 475, "Less", muted, "end"))
+    svg.append(label(892, 475, "Less", muted, "end"))
 
     for i, color in enumerate(heat):
         svg.append(
-            f'<rect x="{936 + i * 16}" y="465" '
+            f'<rect x="{904 + i * 16}" y="465" '
             f'width="12" height="12" rx="2" fill="{color}"/>'
         )
     
