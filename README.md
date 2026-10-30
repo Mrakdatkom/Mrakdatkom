@@ -2,7 +2,7 @@
    
 <p align="center">   
   <img src="./assets/react-2.svg" alt="React JS" width="60" height="60" /> &emsp;
-  <img src="./assets/astro-logo.svg" alt="Astro" width="60" height="60" style="margin: 12px 0;" /> &emsp;
+  <img src="./assets/astro-logo.svg" alt="Astro" width="60" height="60" style="margin: 12px 0; border-radius: 20px;" /> &emsp;
   <img src="./assets/gsap-logo.svg" alt="GSAP" width="70" height="70" style="margin: 12px 0;" /> &emsp;
   <img src="./assets/laravel-2.svg" alt="Laravel" width="60" height="60" style="margin: 12px 0;" /> &emsp;
   <img src="./assets/expressjs-2.svg" alt="Express JS" width="60" height="60" style="margin: 12px 0;" /> &emsp;
